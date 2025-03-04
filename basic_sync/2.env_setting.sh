@@ -21,4 +21,29 @@ git remote set-url origin 레포주소
 # git 설정정보 조회
 git config --list
 
+# 타인의 레포 clone받는 방법 2가지
+#1. 커밋이력 그래도 가져오기
+git clone 타인레포주소
+#해당 폴더로 이동 후 github 레포주소 변경
+git remote set-url origin 나의 레포주소
+git push origin main
+
+# 2.커밋이력 없이 레포 가져오기
+git clone 타인레포주소
+# 해당 폴더 안으로 디동후 .git폴더 삭제
+git init
+git remote add origin 나의레포주소
+git add .
+git commit -m 'first'
+git push origin master
+
+#사용자 지정 방법
+#전역적 사용자(이름, email)지정
+git config --global user.name '유저네임'
+git config --global user.email '유저이메일'
+
+#지역적 사용자 지정
+git config --local user.name '유저네임'
+git config --local user.email '유저이메일'
+
 
