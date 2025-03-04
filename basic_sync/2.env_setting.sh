@@ -46,4 +46,8 @@ git config --global user.email '유저이메일'
 git config --local user.name '유저네임'
 git config --local user.email '유저이메일'
 
+# 특정 파일을 git 추적 목록에서 제외시키고 싶다면 .gitignore 파일에 파일목록 등록
+# 이미 add, commit 되어 버린 파일을 추적ㅁ록록에서 제외하고 싶다면
+git rm -r --cached .
 
+# 비밀번호의 경우에 이미 add/commit이 되었다면 가능하면 비밀번호 재설정을 추천
